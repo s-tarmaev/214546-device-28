@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [Сергей Тармаев](https://up.htmlacademy.ru/htmlcss/28/user/214546).
-* Наставник: `Неизвестно`.
+- Студент: [Сергей Тармаев](https://up.htmlacademy.ru/htmlcss/28/user/214546).
+- Наставник: [Евгений Бервяченок](https://up.htmlacademy.ru/htmlcss/28/user/151813).
 
 ---
 
