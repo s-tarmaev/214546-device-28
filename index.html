@@ -11,7 +11,7 @@
     <a href="index.html">
       <img src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина «DEVICE»">
     </a>
-    <form action="https://echo.htmlacademy.ru/courses" method="post">
+    <form action="https://echo.htmlacademy.ru/" method="post">
       <input type="image" src="img/search.svg" alt="Кнопка поиска">
       <input type="search" name="search" id="search">
     </form>
@@ -20,15 +20,16 @@
     <a href="blank.html">Корзина</a>
     <nav>
       <ul>
-        <li><button>Каталог товаров</button></li>
-        <ul class="">
-          <li><a href="blank.html">Виртуальная реальность</a></li>
-          <li><a href="catalog.html">Моноподы для селфи</a></li>
-          <li><a href="blank.html">Экшн-камеры</a></li>
-          <li><a href="blank.html">Фитнес-браслеты</a></li>
-          <li><a href="blank.html">Умные часы</a></li>
-          <li><a href="blank.html">Квадрокоптеры</a></li>
-        </ul>
+        <li><a href="blank.html">Каталог товаров</a>
+          <ul class="">
+            <li><a href="blank.html">Виртуальная реальность</a></li>
+            <li><a href="catalog.html">Моноподы для селфи</a></li>
+            <li><a href="blank.html">Экшн-камеры</a></li>
+            <li><a href="blank.html">Фитнес-браслеты</a></li>
+            <li><a href="blank.html">Умные часы</a></li>
+            <li><a href="blank.html">Квадрокоптеры</a></li>
+          </ul>
+        </li>
         <li><a href="blank.html">Доставка</a></li>
         <li><a href="blank.html">Гарантия</a></li>
         <li><a href="blank.html">Контакты</a></li>
@@ -142,7 +143,7 @@
       <ul>
         <li>
           <div>
-            <button>Доставка</button>
+            <button type="button">Доставка</button>
             <h2>Доставка</h2>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.</p>
@@ -150,7 +151,7 @@
         </li>
         <li>
           <div>
-            <button>Гарантия</button>
+            <button type="button">Гарантия</button>
             <h2>Гарантия</h2>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
@@ -158,7 +159,7 @@
         </li>
         <li>
           <div>
-            <button>Кредит</button>
+            <button type="button">Кредит</button>
             <h2>Кредит</h2>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
               кредита. Выгодные для нашего банка, разумеется.</p>
@@ -193,15 +194,15 @@
         проверить работоспособность покупки. Всякое бывает.</p>
       <a href="#map"><img src="img/map.jpg" width="560" height="222" alt="Карта проезда"></a>
       <div id="map">
-        <button><img src="img/close.svg" alt="Закрыть"></button>
-        <a href="#"><img src="img/map-big .jpg" width="994" height="593" alt="Увеличенная карта проезда"></a>
+        <button type="button">Закрыть</button>
+        <img src="img/map-big .jpg" width="994" height="593" alt="Увеличенная карта проезда">
       </div>
       <a href="blank.html">Напишите нам</a>
     </section>
     <section>
       <h2 class="visually-hidden">Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <button><img src="img/close.svg" alt="Закрыть"></button>
+        <button type="button">Закрыть</button>
         <p>
           <label for="name">Ваше имя</label>
           <input id="name" type="text" name="name" placeholder="Имя Фамилия" required>
@@ -234,7 +235,7 @@
     </section>
     <section>
       <p>г. Москва, ул. Строителей, 15</p>
-      <p>Тел.: +7 (495) 495-95-95</p>
+      <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
     </section>
     <section>
       <ul>
@@ -243,8 +244,8 @@
         <li><a href="blank.html"><img src="https://via.placeholder.com/15x15" alt="twitter"></a></li>
       </ul>
     </section>
-    <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/htmlacademy.svg"
-        alt="Перейти на сайт HTML Academy"></a>
+    <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" title="Перейти на сайт HTML Academy"><img
+        src="img/htmlacademy.svg" alt="Логотип HTML Academy"></a>
   </footer>
 </body>
 
