@@ -15,8 +15,8 @@
       <img src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина «DEVICE»">
     </a>
     <form action="https://echo.htmlacademy.ru/" method="post">
-      <input type="search" name="search" id="search">
-      <button class="btn" type="button">Найти</button>
+      <input class="form-search" type="search" name="search" id="search" placeholder="Поиск по сайту">
+      <button class="button-search" type="button">Найти</button>
     </form>
     <div class="user-menu-header">
       <a href="blank.html">Войти</a>
@@ -51,7 +51,7 @@
             <p class="features">Делай селфи, как Бен Стиллер!</p>
             <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
               всего 5 килограмм.</p>
-            <a class="btn detail" href="blank.html">Подробнее</a>
+            <a class="button-detail" href="blank.html">Подробнее</a>
             <table>
               <tr class="parameter">
                 <td>8,5 м</td>
@@ -71,7 +71,7 @@
             <img src="img/slider-2.png" alt="Фитнес-браслеты">
             <p class="features">Худеем правильно!</p>
             <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-            <a class="btn detail" href="blank.html">Подробнее</a>
+            <a class="button-detail" href="blank.html">Подробнее</a>
             <table>
               <tr class="parameter">
                 <td>48 часов</td>
@@ -88,7 +88,7 @@
             <p class="features">Порхает как бабочка, жалит как пчела!</p>
             <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
               камеру.</p>
-            <a class="btn detail" href="blank.html">Подробнее</a>
+            <a class="button-detail" href="blank.html">Подробнее</a>
             <table>
               <tr class="parameter">
                 <td>800</td>
@@ -148,7 +148,7 @@
       <ul class="service-list">
         <li>
           <div>
-            <button class="btn service" type="button">Доставка</button>
+            <button class="button-service" type="button">Доставка</button>
             <h2 class="service-title">Доставка</h2>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.</p>
@@ -156,7 +156,7 @@
         </li>
         <li>
           <div>
-            <button class="btn service" type="button">Гарантия</button>
+            <button class="button-service" type="button">Гарантия</button>
             <h2 class="service-title">Гарантия</h2>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
@@ -164,7 +164,7 @@
         </li>
         <li>
           <div>
-            <button class="btn service" type="button">Кредит</button>
+            <button class="button-service" type="button">Кредит</button>
             <h2 class="service-title">Кредит</h2>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
               кредита. Выгодные для нашего банка, разумеется.</p>
@@ -192,14 +192,14 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a class="btn" href="blank.html">Подробнее о нас</a>
+        <a class="button-about" href="blank.html">Подробнее о нас</a>
       </section>
       <section class="contacts">
         <h2 class="contacts-title">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.</p>
         <a href="#map"><img src="img/map.jpg" width="560" height="222" alt="Карта проезда"></a>
-        <a class="btn" href="blank.html">Напишите нам</a>
+        <a class="button-contact" href="blank.html">Напишите нам</a>
       </section>
     </div>
 
@@ -224,7 +224,7 @@
           <label for="letter">Текст письма</label>
           <textarea name="letter" id="letter" rows="5" placeholder="В свободной форме" required></textarea>
         </p>
-        <button type="submit">Отправить</button>
+        <button class="button-send" type="submit">Отправить</button>
       </form>
     </section>
 
@@ -240,7 +240,7 @@
     </section>
     <section>
       <ul class="footer-navigation">
-        <li class="footer-navigation"><a href="blank.html">Доставка</a></li>
+        <li><a href="blank.html">Доставка</a></li>
         <li><a href="blank.html">Гарантия</a></li>
         <li><a href="blank.html">Контакты</a></li>
       </ul>

@@ -8,14 +8,15 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
     <header class="main-header">
         <a href="index.html" title="Перейти на главную страницу">
             <img src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина «DEVICE»">
         </a>
         <form action="https://echo.htmlacademy.ru/" method="post">
-          <input type="search" name="search" id="search">
-          <button class="btn" type="button">Найти</button>
+            <input class="form-search" type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <button class="button-search" type="button">Найти</button>
         </form>
         <div class="user-menu-header">
             <a href="blank.html">Валентин Петухов</a>
@@ -24,30 +25,30 @@
         <a href="blank.html">Сравнить</a>
         <a href="blank.html">Корзина</a>
         <nav class="main-navigation">
-          <ul class="header-navigation">
-            <li class="navigation dropdown"><a href="blank.html">Каталог товаров</a>
-              <ul class="dropdown-menu">
-                <li><a href="blank.html">Виртуальная реальность</a></li>
-                <li><a href="catalog.html">Моноподы для селфи</a></li>
-                <li><a href="blank.html">Экшн-камеры</a></li>
-                <li><a href="blank.html">Фитнес-браслеты</a></li>
-                <li><a href="blank.html">Умные часы</a></li>
-                <li><a href="blank.html">Квадрокоптеры</a></li>
-              </ul>
-            </li>
-            <li class="navigation"><a href="blank.html">Доставка</a></li>
-            <li class="navigation"><a href="blank.html">Гарантия</a></li>
-            <li class="navigation"><a href="blank.html">Контакты</a></li>
-          </ul>
+            <ul class="header-navigation">
+                <li class="navigation dropdown"><a href="blank.html">Каталог товаров</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blank.html">Виртуальная реальность</a></li>
+                        <li><a href="catalog.html">Моноподы для селфи</a></li>
+                        <li><a href="blank.html">Экшн-камеры</a></li>
+                        <li><a href="blank.html">Фитнес-браслеты</a></li>
+                        <li><a href="blank.html">Умные часы</a></li>
+                        <li><a href="blank.html">Квадрокоптеры</a></li>
+                    </ul>
+                </li>
+                <li class="navigation"><a href="blank.html">Доставка</a></li>
+                <li class="navigation"><a href="blank.html">Гарантия</a></li>
+                <li class="navigation"><a href="blank.html">Контакты</a></li>
+            </ul>
         </nav>
-      </header>
+    </header>
     <main>
         <section>
             <h1 class="page-title">Моноподы для селфи</h1>
             <ul class="breadcrumbs">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="blank.html">Каталог товаров</a></li>
-                <li class="breadcrumbs-current">Моноподы для селфи</li>
+                <li>Моноподы для селфи</li>
             </ul>
         </section>
         <aside class="sidebar">
@@ -125,8 +126,8 @@
                     <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                     <p>500 руб.</p>
                     <div>
-                        <button type="button">В корзину</button>
-                        <button type="button">Добавить к сравнению</button>
+                        <button class="button-cart" type="button">В корзину</button>
+                        <button class="button-compare" type="button">Добавить к сравнению</button>
                     </div>
                 </li>
                 <li>
@@ -136,8 +137,8 @@
                     <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                     <p>1 500 руб.</p>
                     <div>
-                        <button type="button">В корзину</button>
-                        <button type="button">Добавить к сравнению</button>
+                        <button class="button-cart" type="button">В корзину</button>
+                        <button class="button-compare" type="button">Добавить к сравнению</button>
                     </div>
                 </li>
                 <li>
@@ -147,8 +148,8 @@
                     <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                     <p>2 500 руб.</p>
                     <div>
-                        <button type="button">В корзину</button>
-                        <button type="button">Добавить к сравнению</button>
+                        <button class="button-cart" type="button">В корзину</button>
+                        <button class="button-compare" type="button">Добавить к сравнению</button>
                     </div>
                 </li>
                 <li>
@@ -158,8 +159,8 @@
                     <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                     <p>4 900 руб.</p>
                     <div>
-                        <button type="button">В корзину</button>
-                        <button type="button">Добавить к сравнению</button>
+                        <button class="button-cart" type="button">В корзину</button>
+                        <button class="button-compare" type="button">Добавить к сравнению</button>
                     </div>
                 </li>
             </ul>
@@ -187,7 +188,7 @@
         </section>
         <section>
             <ul class="footer-navigation">
-                <li class="footer-navigation"><a href="blank.html">Доставка</a></li>
+                <li><a href="blank.html">Доставка</a></li>
                 <li><a href="blank.html">Гарантия</a></li>
                 <li><a href="blank.html">Контакты</a></li>
             </ul>
