@@ -102,12 +102,14 @@ img {
   background-color: transparent;
   border-width: 2px;
   border-style: solid;
-  border-color: var(--basic-black);  
+  border-color: var(--basic-black);
   padding: 15px 17px;
 }
 
 .button-search:hover,
 .button-search:focus {
+  display: inline-block;
+  opacity: 1;
   color: var(--basic-white);
   background-color: var(--basic-black);
 }
@@ -116,6 +118,12 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-black);
   opacity: 0.3;
+}
+
+.form-search:focus {
+  border-bottom-color: var(--basic-black);
+  border-width: 2px;
+  border-style: solid;
 }
 
 .form-search:focus + .button-search {
@@ -511,7 +519,30 @@ img {
   opacity: 1;
 }
 
-/* Catalog */
+.button-select {
+  font-family: "Gilroyextrabold", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding-top: 7px;
+  padding-right: 38px;
+  padding-bottom: 7px;
+  padding-left: 37px;
+}
+
+.button-select:hover,
+.button-select:focus {
+  background-color: var(--special-yellow-dark);
+}
+
+.button-select:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* -- Catalog -- */
 
 .catalog-items {
   list-style: none;
@@ -537,14 +568,14 @@ img {
 .button-cart {
   font-family: "Gilroyextrabold", sans-serif;
   font-weight: 800;
-font-size: 18px;
-line-height: 22px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-padding-top: 10px;
-padding-right: 38px;
-padding-bottom: 8px;
-padding-left: 38px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-right: 38px;
+  padding-bottom: 8px;
+  padding-left: 38px;
 }
 
 .button-cart:hover,
