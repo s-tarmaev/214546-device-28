@@ -34,7 +34,7 @@
 /* Global */
 
 body {
-  /* min-width: 1180px; */
+  /* min-width: 1460px; */
   margin: 0;
   padding: 0;
   font-family: "Open sans", sans-serif;
@@ -63,10 +63,27 @@ img {
   margin: -1px;
 }
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
 /* Main navigation */
 
 .main-header {
+  width: 1160px;
   background-color: var(--special-yellow);
+  margin-top: 40px;
+  margin-bottom: -170px;
 }
 
 .main-header a:hover,
@@ -76,6 +93,23 @@ img {
 
 .main-header a:active {
   opacity: 0.3;
+}
+.header-logo {
+  width: 163px;
+  height: 35px;
+}
+
+.header-logo img {
+  margin-top: -20px;
+  margin-left: 60px;
+}
+
+.main-navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1040px;
+  margin: 0 auto;
 }
 
 .form-search {
@@ -131,11 +165,24 @@ img {
   opacity: 1;
 }
 
+.user-menu-header {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   font-size: 15px;
   line-height: 20px;
   color: var(--basic-black);
   background-color: transparent;
+
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
 }
 
 .header-navigation {
@@ -160,10 +207,35 @@ img {
   text-transform: none;
 }
 
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 /* Promo */
 
 .promo-slider {
+  width: 1024px;
+  margin: 0 auto;
   background-color: transparent;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide {
+  width: 384px;
+
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
+
+.promo {
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+  
 }
 
 .features {
@@ -171,21 +243,11 @@ img {
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
+  margin-bottom: 30px;
 }
 
-.parameter-name {
-  font-family: "Gilroylight", sans-serif;
-  font-weight: 300;
-  font-size: 13px;
-  line-height: 15px;
-  letter-spacing: 0.1em;
-}
-.parameter {
-  font-family: "Gilroylight", sans-serif;
-  font-weight: 300;
-  font-size: 36px;
-  line-height: 42px;
-  letter-spacing: 0.1em;
+.description {
+  margin-bottom: 60px;
 }
 
 .button-detail {
@@ -211,13 +273,38 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.parameter-name {
+  font-family: "Gilroylight", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+.parameter {
+  font-family: "Gilroylight", sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+}
+
+.promo table {
+  width: 444px;
+  margin-top: 60px;
+}
+
 /* Catalog */
 
 .catalog-list {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+  padding: 0;
+  margin-bottom: 49px;
 }
 
 .catalog-item {
+  width: 160px;
   font-family: "Gilroyextrabold", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -238,7 +325,9 @@ img {
 /* Service */
 
 .services-slider {
+  width:100%;
   background-color: var(--basic-grey-light);
+  margin-bottom: 90px;
 }
 
 .service-list {
@@ -282,10 +371,24 @@ img {
 /* Brands */
 
 .brand-list {
+  display: flex;
+  justify-content: space-around;
   list-style: none;
+  padding: 0;
+  margin-bottom: 90px;
 }
 
 /* About us */
+
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 86px;
+}
+
+.index-columns p {
+  margin-bottom: 40px;
+}
 
 .about-title {
   font-family: "Gilroyextrabold", sans-serif;
@@ -305,6 +408,7 @@ img {
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
+  margin-bottom: 84px;
 }
 
 .button-about {
@@ -342,6 +446,10 @@ img {
 
 .contacts {
   line-height: 28px;
+}
+
+.contacts img {
+  margin-bottom: 31px;
 }
 
 .button-contact {
@@ -399,6 +507,8 @@ img {
 /* Footer */
 
 .main-footer {
+  display: flex;
+  flex-direction: column;
   background-color: var(--basic-dark);
 }
 
@@ -416,8 +526,23 @@ img {
   opacity: 0.3;
 }
 
+.user-menu-footer {
+  align-self: flex-end;
+  width: 325px;
+}
+
+.header-logo {
+  align-self: flex-start;
+  width: 163px;
+}
+
+.auxiliary-navigation {
+  align-self: center;
+}
+
 .footer-navigation {
   list-style: none;
+  padding: 0;
 }
 
 .footer-navigation a {
@@ -429,8 +554,23 @@ img {
   text-transform: uppercase;
 }
 
+.footer-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-social {
+  align-self: center;
+}
+
 .footer-social ul {
   list-style: none;
+  padding: 0;
+}
+
+.logo-academy {
+  align-self: flex-end;
 }
 
 /* Monopod */
