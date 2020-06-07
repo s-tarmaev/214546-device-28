@@ -15,7 +15,6 @@
       <img src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина «DEVICE»">
     </a>
     <div class="main-navigation-wrapper">
-
       <form action="https://echo.htmlacademy.ru/" method="post">
         <input class="form-search" type="search" name="search" id="search" placeholder="Поиск по сайту">
         <button class="button-search" type="button">Найти</button>
@@ -44,9 +43,9 @@
           <li class="navigation"><a href="blank.html">Контакты</a></li>
         </ul>
       </nav>
-
   </header>
-  <main class="container">
+
+  <main>
     <h1 class="visually-hidden">Магазин «DEVICE»</h1>
     <section class="promo-slider">
       <ol>
@@ -121,48 +120,62 @@
         </li>
       </ol>
     </section>
-    <section>
+    <section class="container">
       <h2 class="visually-hidden">Каталог товаров</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
           <a href="blank.html">
+            <div class="catalog-item-image">
             <img src="img/vr.svg" width="97" height="55" alt="Виртуальная реальность">
+          </div>
             <p>Виртуальная реальность</p>
           </a>
         </li>
         <li class="catalog-item">
           <a href="blank.html">
+            <div class="catalog-item-image">
             <img src="img/monopod.svg" width="86" height="117" alt="Моноподы для селфи">
-            <p>Моноподы для селфи</p>
+          </div>
+            <p>Моноподы <br> 
+              для селфи</p>
           </a>
         </li>
         <li class="catalog-item">
           <a href="catalog.html">
+            <div class="catalog-item-image">
             <img src="img/action-camera.svg" width="71" height="87" alt="Экшн-камеры">
+          </div>
             <p>Экшн-камеры</p>
           </a>
         </li>
         <li class="catalog-item">
           <a href="blank.html">
+            <div class="catalog-item-image">
             <img src="img/fitbit.svg" width="107" height="65" alt="Фитнес-браслеты">
+          </div>
             <p>Фитнес-браслеты</p>
           </a>
         </li>
         <li class="catalog-item">
           <a href="blank.html">
+            <div class="catalog-item-image">
             <img src="img/watch.svg" width="56" height="98" alt="Умные часы">
+          </div>
             <p>Умные часы</p>
           </a>
         </li>
         <li class="catalog-item">
           <a href="blank.html">
+            <div class="catalog-item-image">
             <img src="img/quadcopter.svg" width="132" height="69" alt="Квадрокоптеры">
+          </div>
             <p>Квадрокоптеры</p>
           </a>
         </li>
       </ul>
     </section>
     <section class="services-slider">
+      <div class="container">
       <ul class="service-list">
         <li>
           <div>
@@ -189,8 +202,9 @@
           </div>
         </li>
       </ul>
+    </div>
     </section>
-    <section class="brands">
+    <section class="brands container">
       <h2 class="visually-hidden">Бренды</h2>
       <ul class="brand-list">
         <li><a href="blank.html"><img src="img/dji.jpg" width="260" height="100" alt="DJI"></a></li>
@@ -199,7 +213,7 @@
         <li><a href="blank.html"><img src="img/vive.jpg" width="260" height="100" alt="Vive"></a></li>
       </ul>
     </section>
-    <div class="index-columns">
+    <div class="index-columns container">
       <section class="about">
         <h2 class="about-title">О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -248,14 +262,15 @@
 
   </main>
   <footer class="main-footer">
+    <div class="main-footer-wrap container">
     <section class="user-menu-footer">
       <a href="blank.html">Войти</a>
       <a href="blank.html">Сравнить</a>
       <a href="blank.html">Корзина</a>
     </section>
     <a class="footer-logo"><img src="img/logo-footer.svg" width="163" height="35" alt="Логотип магазина «DEVICE»"></a>
-    <section class="auxiliary-navigation">
-      <ul class="footer-navigation">
+    <section class="footer-navigation">
+      <ul>
         <li><a href="blank.html">Доставка</a></li>
         <li><a href="blank.html">Гарантия</a></li>
         <li><a href="blank.html">Контакты</a></li>
@@ -274,6 +289,7 @@
     </section>
     <a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"
       title="Перейти на сайт HTML Academy"><img src="img/htmlacademy.svg" alt="Логотип HTML Academy"></a>
+    </div>
   </footer>
 </body>
 
