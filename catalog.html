@@ -22,12 +22,12 @@
                 </form>
                 <div class="user-menu-header">
                     <div>
-                        <a class="login" href="blank.html">Валентин Петухов</a>
-                        <a class="logout" href="blank.html">Выйти</a>
+                        <a class="login-header" href="blank.html">Валентин Петухов</a>
+                        <a class="logout-header" href="blank.html">Выйти</a>
                     </div>
                     <div class="buy-menu">
-                        <a class="check" href="blank.html">Сравнить</a>
-                        <a class="cart" href="blank.html">Корзина</a>
+                        <a class="check-header" href="blank.html">Сравнить</a>
+                        <a class="cart-header" href="blank.html">Корзина</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,6 @@
             </nav>
         </div>
     </header>
-
     <main class="page-catalog container">
         <section class="page-navigation">
             <h1 class="page-title">Моноподы для селфи</h1>
@@ -63,52 +62,68 @@
         <aside class="sidebar">
             <h2 class="filter-title">Фильтр:</h2>
             <div class=filter-wrap>
-                <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-                    <fieldset>
-                        <legend>Стоимость</legend>
-                        <div>
-                            <button type="button">Кнопка 1</button>
-                            <button type="button">Кнопка 2</button>
+                <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset class="filter-item">
+                        <legend class="filter-name">Стоимость:</legend>
+                        <div class="range-filter">
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="toggle toggle-min" tabindex="0"></div>
+                                <div class="toggle toggle-max" tabindex="0"></div>
+                            </div>
+                            <div class="price-controls">
+                                <label class="min-price">
+                                    от <input type="number" name="min-price" value="0">
+                                </label>
+                                <label class="max-price">
+                                    до <input type="number" name="max-price" value="5000">
+                                </label>
+                            </div>
                         </div>
-                        <label>от</label>
-                        <input class="min-price" id="filter-price" type="number" step="100" value="0">
-                        <label>до</label>
-                        <input class="max-price" id="filter-price" type="number" step="100" value="5000">
                     </fieldset>
-                    <fieldset>
-                        <legend>Цвет</legend>
+                    <fieldset class="filter-item">
+                        <legend class="filter-name">Цвет</legend>
                         <ul>
                             <li class="filter-option filter-checkbox">
-                                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color-black" id="filter-black" checked>
+                                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                                    name="color-black" id="filter-black" checked>
                                 <label for="filter-black">Чёрный</label>
                             </li>
                             <li class="filter-option filter-checkbox">
-                                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color-white" id="filter-white">
+                                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                                    name="color-white" id="filter-white">
                                 <label for="filter-white">Белый</label>
                             </li>
                             <li class="filter-option filter-checkbox">
-                                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color-blue" id="filter-blue" checked>
+                                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                                    name="color-blue" id="filter-blue" checked>
                                 <label for="filter-blue">Синий</label>
                             </li>
                             <li class="filter-option filter-checkbox">
-                                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color-red" id="filter-red" checked>
+                                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                                    name="color-red" id="filter-red" checked>
                                 <label for="filter-red">Красный</label>
                             </li>
                             <li class="filter-option filter-checkbox">
-                                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="color-pink" id="filter-pink">
+                                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                                    name="color-pink" id="filter-pink">
                                 <label for="filter-pink">Розовый</label>
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset>
-                        <legend>Bluetooth</legend>
+                    <fieldset class="filter-item">
+                        <legend class="filter-name">Bluetooth</legend>
                         <ul>
                             <li class="filter-option filter-radio">
-                                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="bluetooth" value="yes" id="filter-yes" checked>
+                                <input class="visually-hidden filter-input-radio filter-input" type="radio"
+                                    name="bluetooth" value="yes" id="filter-yes" checked>
                                 <label for="filter-yes">Есть</label>
                             </li>
                             <li class="filter-option filter-radio">
-                                <input class="visually-hidden filter-input-radio filter-input" type="radio" name="bluetooth" value="no" id="filter-no">
+                                <input class="visually-hidden filter-input-radio filter-input" type="radio"
+                                    name="bluetooth" value="no" id="filter-no">
                                 <label for="filter-no">Нет</label>
                             </li>
                         </ul>
@@ -126,7 +141,9 @@
             </ul>
             <ul>
                 <li><a href="">-></a></li>
-                <li><a href=""><-</a></li>
+                <li><a href="">
+                        <-< /a>
+                </li>
             </ul>
         </section>
         <section class="catalog">
@@ -184,23 +201,23 @@
                     </div>
                 </li>
             </ul>
-        <div class="pagination">
-            <button class="button-back" type="button">Назад</button>
-            <ul class="pagination-list">
-                <li><a>1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-            </ul>
-            <button class="button-forward" type="button">Вперед</button>
-        </div>
-    </section>
+            <div class="pagination">
+                <button class="button-back" type="button">Назад</button>
+                <ul class="pagination-list">
+                    <li><a class="page-current">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+                <button class="button-forward" type="button">Вперед</button>
+            </div>
+        </section>
     </main>
     <footer class="main-footer">
         <div class="container">
             <div class="main-footer-row-1">
                 <section class="user-menu-footer">
                     <a class="login-footer" href="blank.html">Валентин Петухов</a>
-                    <a class="login-footer" href="blank.html">Выйти</a>
+                    <a class="login-current" href="blank.html">Выйти</a>
                     <a class="check-footer" href="blank.html">Сравнить</a>
                     <a class="cart-footer" href="blank.html">Корзина</a>
                 </section>
