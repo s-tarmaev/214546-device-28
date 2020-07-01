@@ -39,7 +39,7 @@
               <li><a href="blank.html">Экшн-камеры</a></li>
               <li><a href="blank.html">Фитнес-браслеты</a></li>
               <li><a href="blank.html">Умные часы</a></li>
-              <li><a href="blank.html">Квадрокоптеры</a></li>
+              <li><a href="blank.html">Квадрокоптер</a></li>
             </ul>
           </li>
           <li class="navigation"><a href="blank.html">Доставка</a></li>
@@ -56,13 +56,14 @@
       <ol>
         <li class="slide-popular promo-current">
           <div class="slider">
-            <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная селфи-палка">
+            <div class="promo-image">
+              <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная селфи-палка">
+            </div>
             <div class="promo">
               <h3 class="features">Делай селфи,<br>
                 как Бен Стиллер!</h3>
-              <p class="description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
-                метров длиной и весом
-                всего 5 килограмм.</p>
+              <p class="description">Самая длинная палка для селфи доступна в нашем магазине.<br>
+                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
               <a class="button-detail" href="blank.html">Подробнее</a>
               <table>
                 <tr class="parameter">
@@ -99,9 +100,11 @@
             </div>
           </div>
         </li>
-        <li class="slide-popular">
+        <li class="slide-popular ">
           <div class="slider">
-            <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+            <div class="promo1">
+              <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+            </div>
             <div class="promo">
               <h3 class="features">Порхает как бабочка, жалит как пчела!</h3>
               <p class="description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
@@ -140,7 +143,7 @@
           </a>
         </li>
         <li class="catalog-item">
-          <a href="blank.html">
+          <a href="catalog.html">
             <div class="catalog-item-image">
               <img src="img/monopod.svg" width="86" height="117" alt="Моноподы для селфи">
             </div>
@@ -149,7 +152,7 @@
           </a>
         </li>
         <li class="catalog-item">
-          <a href="catalog.html">
+          <a href="blank.html">
             <div class="catalog-item-image">
               <img src="img/action-camera.svg" width="71" height="87" alt="Экшн-камеры">
             </div>
@@ -161,7 +164,7 @@
             <div class="catalog-item-image">
               <img src="img/fitbit.svg" width="107" height="65" alt="Фитнес-браслеты">
             </div>
-            <p>Фитнес-браслеты</p>
+            <p class="bracelet">Фитнес-браслеты</p>
           </a>
         </li>
         <li class="catalog-item">
@@ -190,12 +193,11 @@
           <button class="button-service" type="button">Гарантия</button>
           <button class="button-service" type="button">Кредит</button>
         </div>
-        <div class="decoration"></div>
         <ul class="service-list">
           <li class="service-slide service-current">
             <h2 class="service-title">Доставка</h2>
-            <p class="service-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
-              бесплатно! Ведь мы неплохо
+            <p class="service-description">Мы с удовольствием доставим ваш товар прямо к вашему <br>
+              подъезду совершенно бесплатно! Ведь мы неплохо<br> 
               заработаем, поднимая его на ваш этаж.</p>
           </li>
           <li class="service-slide">
@@ -243,32 +245,6 @@
         <a class="button-contact" href="blank.html">Напишите нам</a>
       </section>
     </div>
-
-    <section class="bigmap popup">
-      <button class="btn" type="button">Закрыть</button>
-      <img src="img/map-big .jpg" width="994" height="593" alt="Увеличенная карта проезда">
-    </section>
-
-    <section class="writeus popup">
-      <h2 class="visually-hidden">Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <button type="button">Закрыть</button>
-        <p>
-          <label for="name">Ваше имя</label>
-          <input id="name" type="text" name="name" placeholder="Имя Фамилия" required>
-        </p>
-        <p>
-          <label for="email">Ваш e-mail</label>
-          <input id="email" type="email" name="email" placeholder="email@example.com" required>
-        </p>
-        <p>
-          <label for="letter">Текст письма</label>
-          <textarea name="letter" id="letter" rows="5" placeholder="В свободной форме" required></textarea>
-        </p>
-        <button class="button-send" type="submit">Отправить</button>
-      </form>
-    </section>
-
   </main>
   <footer class="main-footer">
     <div class="container">
@@ -307,6 +283,31 @@
     </div>
 
   </footer>
+  <section class="modal modal-feedback">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="feedback-name">
+        <label for="name">Ваше имя</label>
+        <input id="name" type="text" name="name" placeholder="Имя Фамилия" required>
+      </div>
+      <div class="feedback-email">
+        <label for="email">Ваш e-mail</label>
+        <input id="email" type="email" name="email" placeholder="email@example.com" required>
+      </div>
+      <div class="feedback-letter">
+        <label for="letter">Текст письма</label>
+        <textarea name="letter" id="letter" rows="5" placeholder="В свободной форме" required></textarea>
+      </div>
+      <button class="button-send" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <img src="img/map-big.jpg" width="994" height="593" alt="Магазин находится по адресу: г. Москва, ул. Строителей, 15">
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
 </body>
 
 </html>
