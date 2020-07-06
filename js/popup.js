@@ -43,9 +43,9 @@ feedbackForm.addEventListener("submit", function (evt) {
     feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
     feedbackPopup.classList.add("modal-error");
   } else {
-    localStorage.setItem("login", loginLogin.value);
+    localStorage.setItem("login", feedbackName.value);
     if (isStorageSupport) {
-    localStorage.setItem("login", loginLogin.value);
+      localStorage.setItem("login", feedbackName.value);
     }
   }
 });

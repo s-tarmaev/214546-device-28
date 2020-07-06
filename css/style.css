@@ -1428,6 +1428,7 @@ input[type="radio"].visually-hidden {
   background-position: center;
   cursor: pointer;
   opacity: 0.5;
+  z-index: 20;
 }
 
 .modal-close:hover,
