@@ -176,7 +176,7 @@ input[type="radio"].visually-hidden {
 
 .button-search:hover,
 .button-search:focus {
-  display: inline-block;
+  display: block;
   color: var(--basic-white);
   background-color: var(--basic-black);
 }
@@ -186,7 +186,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form-search:focus + .button-search {
-  display: inline-block;
+  display: block;
   border-bottom: transparent;
 }
 
@@ -407,7 +407,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;
   background-color: transparent;
-  /* counter-reset: item; */
   list-style-type: none;
 }
 
@@ -460,7 +459,7 @@ input[type="radio"].visually-hidden {
 .slide-popular::before {
   position: absolute;
   z-index: 1;
-  display: inline-block;
+  display: block;
   background-color: transparent;
   font-family: "Gilroyextrabold", sans-serif;
   font-weight: 800;
@@ -490,7 +489,7 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   top: 34px;
-  display: inline-block;
+  display: block;
   width: 100px;
   height: 7px;
   background-color: var(--basic-white);
@@ -691,7 +690,6 @@ input[type="radio"].visually-hidden {
 .service-item {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   width: 277px;
   position: relative;
   margin-top: 135px;
@@ -901,7 +899,7 @@ input[type="radio"].visually-hidden {
 .about::before,
 .contacts::before {
   content: "";
-  display: inline-block;
+  display: block;
   width: 80px;
   height: 7px;
   background-color: var(--basic-black);
