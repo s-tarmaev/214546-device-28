@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <link href="css/normalizemin.css" rel="stylesheet">
-  <link href="css/stylemin.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -16,10 +16,10 @@
     </a>
     <div class="header-navigation-wrapper">
       <div class="user-menu-header-wrapper">
-        <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="search">Поиск</label>
-          <input class="form-search" type="search" name="search" id="search" placeholder="Поиск по сайту">
-          <button class="button-search" type="button">Найти</button>
+          <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+          <button class="button-search" type="submit">Найти</button>
         </form>
         <div class="user-menu-header">
           <div>
@@ -295,7 +295,7 @@
       </div>
       <div class="feedback-letter">
         <label for="letter">Текст письма</label>
-        <textarea name="letter" id="letter" rows="5" placeholder="В свободной форме" required></textarea>
+        <textarea name="letter" id="letter" rows="5" placeholder="В свободной форме"></textarea>
       </div>
       <button class="button-send" type="submit">Отправить</button>
     </form>
@@ -311,7 +311,7 @@
       alt="Магазин находится по адресу: г. Москва, ул. Строителей, 15">
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
-  <script src="js/popupmin.js"></script>
+  <script src="js/popup.min.js"></script>
 </body>
 
 </html>

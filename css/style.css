@@ -18,16 +18,27 @@
 
 :root {
   --basic-black: #000000;
+  --basic-black6: #666666;
+  --basic-black4: #999999;
+  --basic-black3: #b3b3b3;
+  --basic-black15: #d9d9d9;
+  --basic-black2: #cccccc;
+  --basic-black1: #e6e6e6;
+
   --basic-dark: #363636;
   --basic-grey: #464646;
   --basic-half-grey: #7e7e7e;
-  --basic-grey-light: #e5e5e5;
+  --basic-silver-grey: #c4c4c4;
+  --basic-light-grey: #e5e5e5;
+  --basic-gainsborough: #dcdcdc;
   --basic-white: #ffffff;
 
   --special-yellow-dark: #f0c52e;
   --special-yellow: #f7e296;
-  --special--green: #91c92f;
+  --special-green: #91c92f;
 
+  --status-grey-light: #eaeaea;
+  --status-grey-light-light: #f2f2f2;
   --status-pink-light: #f6dada;
 }
 
@@ -37,7 +48,7 @@ body {
   min-width: 1460px;
   margin: 0;
   padding-top: 40px;
-  font-family: "Open sans", sans-serif;
+  font-family: "Open sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
@@ -90,15 +101,6 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
 }
 
-.main-header a:hover,
-.main-header a:focus {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.main-header a:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
 .header-logo img {
   margin-top: -20px;
   margin-left: 60px;
@@ -120,13 +122,13 @@ input[type="radio"].visually-hidden {
   margin-bottom: 34px;
 }
 
-.form {
+.search-form {
+  display: flex;
   width: 440px;
-  position: relative;
   box-sizing: border-box;
 }
 
-.form-search {
+.search-input {
   width: 100%;
   padding-top: 15px;
   padding-right: 100px;
@@ -141,13 +143,13 @@ input[type="radio"].visually-hidden {
   background-size: 13px 13px;
 }
 
-.form-search:focus {
-  border-bottom: 2px solid black;
+.search-input:focus {
+  border-bottom: 2px solid var(--basic-black);
   outline: none;
 }
 
-.form-search::placeholder {
-  font-family: "Open sans", sans-serif;
+.search-input::placeholder {
+  font-family: "Open sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -156,11 +158,11 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-.form-search:hover::placeholder {
+.search-input:hover::placeholder {
   opacity: 0.6;
 }
 
-.form-search:focus::placeholder {
+.search-input:focus::placeholder {
   opacity: 1;
 }
 
@@ -169,9 +171,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   background-color: transparent;
   padding: 14px 17px;
-  position: absolute;
-  right: 0;
-  border: 2px solid black;
+  border: 2px solid var(--basic-black);
 }
 
 .button-search:hover,
@@ -185,9 +185,8 @@ input[type="radio"].visually-hidden {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.form-search:focus + .button-search {
+.search-input:focus + .button-search {
   display: block;
-  border-bottom: transparent;
 }
 
 .user-menu-header {
@@ -264,6 +263,21 @@ input[type="radio"].visually-hidden {
   background-position: center;
 }
 
+.login-header:hover,
+.check-header:hover,
+.cart-header:hover,
+.login-header:focus,
+.check-header:focus,
+.cart-header:focus {
+  opacity: 0.6;
+}
+
+.login-header:active,
+.check-header:active,
+.cart-header:active {
+  opacity: 0.3;
+}
+
 .main-navigation {
   width: 100%;
   background-color: transparent;
@@ -278,9 +292,18 @@ input[type="radio"].visually-hidden {
   width: inherit;
 }
 
+.header-navigation a:hover,
+.header-navigation a:focus {
+  color: var(--basic-black6);
+}
+
+.header-navigation a:active {
+  color: var(--basic-black3);
+}
+
 .navigation {
   position: relative;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -341,7 +364,7 @@ input[type="radio"].visually-hidden {
   height: 144px;
   padding: 0;
   list-style: none;
-  font-family: "Open sans", sans-serif;
+  font-family: "Open sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
@@ -461,7 +484,7 @@ input[type="radio"].visually-hidden {
   z-index: 1;
   display: block;
   background-color: transparent;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 179px;
   color: var(--basic-white);
@@ -498,7 +521,7 @@ input[type="radio"].visually-hidden {
 .features {
   position: relative;
   z-index: 2;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -513,7 +536,7 @@ input[type="radio"].visually-hidden {
 
 .button-detail {
   position: relative;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -545,18 +568,18 @@ input[type="radio"].visually-hidden {
 }
 
 .button-detail:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black3);
 }
 
 .parameter-name {
-  font-family: "Gilroylight", sans-serif;
+  font-family: "Gilroylight", "Arial", sans-serif;
   font-weight: 300;
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
 }
 .parameter {
-  font-family: "Gilroylight", sans-serif;
+  font-family: "Gilroylight", "Arial", sans-serif;
   font-weight: 300;
   font-size: 36px;
   line-height: 42px;
@@ -638,7 +661,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item p {
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -677,7 +700,7 @@ input[type="radio"].visually-hidden {
   content: " ";
   position: absolute;
   bottom: -14px;
-  background-color: var(--basic-grey-light);
+  background-color: var(--basic-light-grey);
   width: 100%;
   height: 288px;
   z-index: -1;
@@ -764,7 +787,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   width: 160px;
   height: 40px;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -797,6 +820,24 @@ input[type="radio"].visually-hidden {
   margin-bottom: 0;
 }
 
+.button-service-current {
+  width: 277px;
+  position: relative;
+  background-color: var(--basic-black);
+  color: var(--special-yellow);
+}
+
+.button-service:not(.button-service-current):hover,
+.button-service:not(.button-service-current):focus {
+  background-color: var(--special-yellow-dark);
+}
+
+.button-service:not(.button-service-current):active {
+  width: 277px;
+  color: var(--special-yellow);
+  background-color: var(--basic-black);
+}
+
 .button-service:not(.button-service-current)::before {
   position: absolute;
   content: " ";
@@ -808,26 +849,12 @@ input[type="radio"].visually-hidden {
   z-index: -1;
 }
 
-.button-service-current {
-  width: 277px;
-  position: relative;
-  background-color: var(--basic-black);
-  color: var(--special-yellow);
-}
-
-.button-service:hover,
-.button-service:focus {
-  background-color: var(--special-yellow-dark);
-}
-
-.button-service:active {
-  width: 277px;
-  color: var(--special-yellow);
-  background-color: var(--basic-black);
+.button-service:active::before {
+  display: none;
 }
 
 .service-title {
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -840,7 +867,7 @@ input[type="radio"].visually-hidden {
 
 .service-description {
   width: 574px;
-  font-family: "Open sans", sans-serif;
+  font-family: "Open sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -906,7 +933,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-title {
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -916,7 +943,7 @@ input[type="radio"].visually-hidden {
 
 .delivery {
   list-style-type: none;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
@@ -939,14 +966,14 @@ input[type="radio"].visually-hidden {
   top: 8px;
   width: 6px;
   height: 6px;
-  border: 2px solid var(--basic-grey-light);
+  border: 2px solid var(--basic-light-grey);
   border-radius: 50%;
 }
 
 .button-about {
   position: relative;
   width: 260px;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -977,13 +1004,13 @@ input[type="radio"].visually-hidden {
 }
 
 .button-about:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black3);
 }
 
 /* Contacts */
 
 .contacts-title {
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -1003,7 +1030,7 @@ input[type="radio"].visually-hidden {
 .button-contact {
   position: relative;
   width: 260px;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1034,7 +1061,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-contact:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black3);
 }
 
 /* Footer */
@@ -1075,14 +1102,15 @@ input[type="radio"].visually-hidden {
 .login-current,
 .check-footer,
 .cart-footer {
-  font-family: "Open sans", sans-serif;
+  font-family: "Open sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 20px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--basic-white);
   margin-left: 64px;
   padding-top: 15px;
   padding-bottom: 15px;
   position: relative;
+  opacity: 0.7;
 }
 
 .login-footer,
@@ -1098,7 +1126,7 @@ input[type="radio"].visually-hidden {
 .check-footer:focus,
 .cart-footer:hover,
 .cart-footer:focus {
-  color: rgba(255, 255, 255, 1);
+  opacity: 1;
 }
 
 .login-footer:active,
@@ -1185,7 +1213,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-navigation li {
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1298,7 +1326,7 @@ input[type="radio"].visually-hidden {
   padding-right: 100px;
   padding-bottom: 70px;
   background-color: var(--basic-white);
-  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 10px 16px var(--basic-black15);
 }
 
 .feedback-form {
@@ -1318,7 +1346,7 @@ input[type="radio"].visually-hidden {
   display: block;
   width: 100%;
   margin-bottom: 10px;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -1329,7 +1357,7 @@ input[type="radio"].visually-hidden {
 .feedback-email input,
 .feedback-letter textarea {
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: var(--status-grey-light-light);
   border: 2px solid transparent;
   padding-top: 16px;
   padding-bottom: 15px;
@@ -1340,14 +1368,14 @@ input[type="radio"].visually-hidden {
 .feedback-name input:hover,
 .feedback-email input:hover,
 .feedback-letter textarea:hover {
-  background-color: #eaeaea;
+  background-color: var(--status-grey-light);
 }
 
 .feedback-name input:focus,
 .feedback-email input:focus,
 .feedback-letter textarea:focus {
   background-color: var(--basic-white);
-  border: 2px solid #f7e296;
+  border: 2px solid var(--special-yellow);
 }
 
 .feedback-name input:focus::placeholder,
@@ -1369,7 +1397,7 @@ input[type="radio"].visually-hidden {
 
 .button-send {
   position: relative;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1389,7 +1417,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-send:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black3);
 }
 
 .button-send::before {
@@ -1409,7 +1437,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-send:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black3);
 }
 
 .modal-close {
@@ -1438,6 +1466,11 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+.feedback-name input:invalid,
+.feedback-email input:invalid {
+  background-color: var(--status-pink-light);
+}
+
 /* Modal map */
 
 .modal-map {
@@ -1451,7 +1484,7 @@ input[type="radio"].visually-hidden {
   left: 0;
   z-index: 1;
   margin: 0;
-  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 10px 16px var(--basic-black15);
 }
 
 .modal-map iframe {
@@ -1505,7 +1538,7 @@ input[type="radio"].visually-hidden {
 /* Monopod */
 
 .page-title {
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -1545,13 +1578,13 @@ input[type="radio"].visually-hidden {
 .breadcrumbs li {
   font-size: 14px;
   line-height: 19px;
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black3);
   margin-right: 40px;
   position: relative;
 }
 
 .breadcrumbs-current {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black3);
 }
 
 .breadcrumbs li:first-child::after {
@@ -1588,11 +1621,11 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--basic-black6);
 }
 
 .breadcrumbs a:active {
-  color: rgba(0, 0, 0, 0.1);
+  color: var(--basic-black1);
 }
 
 /* Filters */
@@ -1605,13 +1638,13 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-title {
-  background-color: #dcdcdc;
+  background-color: var(--basic-gainsborough);
 }
 
 .filter-title h2 {
   width: 330px;
   display: block;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -1627,7 +1660,7 @@ input[type="radio"].visually-hidden {
 
 .filter-wrap {
   padding-top: 70px;
-  background-color: var(--basic-grey-light);
+  background-color: var(--basic-light-grey);
   flex-grow: 1;
 }
 
@@ -1651,7 +1684,7 @@ input[type="radio"].visually-hidden {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  font-family: "Gilroylight", sans-serif;
+  font-family: "Gilroylight", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -1662,7 +1695,7 @@ input[type="radio"].visually-hidden {
 .max-price input {
   width: 50%;
   text-align: left;
-  font-family: "Gilroylight", sans-serif;
+  font-family: "Gilroylight", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -1702,7 +1735,7 @@ input[type="radio"].visually-hidden {
 .range-controls .bar {
   width: 60%;
   height: 2px;
-  background: var(--special--green);
+  background: var(--special-green);
   padding: 0;
 }
 
@@ -1715,9 +1748,9 @@ input[type="radio"].visually-hidden {
   padding: 0;
   border: 8px solid var(--basic-white);
   box-sizing: border-box;
-  background-color: #c4c4c4;
+  background-color: var(--basic-silver-grey);
   border-radius: 50%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 2px 2px var(--basic-black15);
   cursor: pointer;
 }
 
@@ -1734,7 +1767,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter legend {
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 14px;
   line-height: 17px;
@@ -1806,14 +1839,27 @@ input[type="radio"].visually-hidden {
   left: 8px;
   width: 10px;
   height: 10px;
-  background-color: #000000;
+  background-color: var(--basic-black);
   border-radius: 50%;
+}
+
+.filter-input + label:hover::before,
+.filter-input + label:hover::after,
+.filter-input + label:focus::before,
+.filter-input + label:focus::after {
+  opacity: 0.6;
+}
+
+.filter-input:disabled + label,
+.filter-input:disabled + label::before,
+.filter-input:disabled + label::after {
+  opacity: 0.25;
 }
 
 .button-select {
   width: 200px;
   position: relative;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1846,13 +1892,13 @@ input[type="radio"].visually-hidden {
 }
 
 .button-select:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black3);
 }
 
 /* Sort */
 
 .sort {
-  background-color: var(--basic-grey-light);
+  background-color: var(--basic-light-grey);
 }
 
 .sort-wrap {
@@ -1866,7 +1912,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-title {
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -1889,26 +1935,26 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-item a {
-  font-family: "Open sans", sans-serif;
+  font-family: "Open sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 19px;
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black3);
   padding: 15px;
 }
 
 .sort-item-current a {
-  color: rgba(0, 0, 0, 1);
+  color: var(--basic-black);
 }
 
 .sort-item a:hover,
 .sort-item a:focus {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--basic-black6);
 }
 
 .sort-item a:active {
-  color: rgba(0, 0, 0, 1);
+  color: var(--basic-black);
 }
 
 .sort-arrow {
@@ -1926,12 +1972,12 @@ input[type="radio"].visually-hidden {
 }
 
 .arrow svg {
-  fill: #cccccc;
+  fill: var(--basic-black2);
 }
 
 .arrow svg:hover,
 .arrow svg:focus {
-  fill: #999999;
+  fill: var(--basic-black4);
 }
 
 .arrow svg:active {
@@ -1944,7 +1990,7 @@ input[type="radio"].visually-hidden {
 
 .arrow-active svg:hover,
 .arrow-active svg:focus {
-  fill: #999999;
+  fill: var(--basic-black4);
 }
 
 /* -- Catalog -- */
@@ -1981,8 +2027,8 @@ input[type="radio"].visually-hidden {
   content: "new";
   top: 52px;
   right: 46px;
-  color: #b3b3b3;
-  font-family: "Gilroyextrabold", sans-serif;
+  color: var(--basic-black3);
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 12px;
@@ -1997,7 +2043,7 @@ input[type="radio"].visually-hidden {
   right: 28px;
   width: 58px;
   height: 58px;
-  border: 2px solid #b3b3b3;
+  border: 2px solid var(--basic-black3);
   border-radius: 50%;
   background-color: transparent;
 }
@@ -2018,7 +2064,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-element-title p {
   width: 85px;
-  font-family: "Gilroylight", sans-serif;
+  font-family: "Gilroylight", "Arial", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 18px;
@@ -2029,7 +2075,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-element h3 {
   width: 275px;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -2055,7 +2101,7 @@ input[type="radio"].visually-hidden {
 
 .button-cart {
   position: relative;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -2087,7 +2133,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-cart:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black3);
 }
 
 .button-check {
@@ -2114,8 +2160,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  background-color: var(--basic-grey-light);
-  font-family: "Gilroyextrabold", sans-serif;
+  background-color: var(--basic-light-grey);
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
@@ -2161,7 +2207,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 25px;
   background-color: transparent;
   border: none;
-  font-family: "Gilroyextrabold", sans-serif;
+  font-family: "Gilroyextrabold", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
@@ -2182,12 +2228,13 @@ input[type="radio"].visually-hidden {
 
 .button-back:hover,
 .button-back:focus,
-.button-forward:hover .button-forward:focus {
-  background-color: #d9d9d9;
+.button-forward:hover,
+.button-forward:focus {
+  background-color: var(--basic-black15);
 }
 
 .button-back:active,
 .button-forward:active {
-  background-color: #d9d9d9;
-  color: rgba(0, 0, 0, 0.3);
+  background-color: var(--basic-black15);
+  color: var(--basic-black3);
 }
